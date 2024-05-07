@@ -32,11 +32,35 @@ export class HomePage extends BasePage{
         return cy.get("input#userNumber");
     }
     //Date of birth section
+    static get clickOnDatePicker(){
+        return cy.get("#dateOfBirthInput").click();
+    }
+    static get setBirthMonth(){
+        return cy.get("[class='react-datepicker__month-select']");
+    }
+
+    static get setBirthYear(){
+        return cy.get("[class='react-datepicker__year-select']");
+    }
+
+    static get setBirthDay(){
+        return cy.get("[class='react-datepicker__week']");
+    }
+
     //Subject section
     static get setSubject(){
         return cy.get("input#subjectsInput");
     }
+
+    //TODO: jāpbeidz
+    static get setAutoComplete(){
+        return cy.get("#subjectsContainer");
+    }
+
     //Hobbies section
+    static get setHobbies(){
+        return cy.get("#hobbiesWrapper");
+    }
     //Picture section
     //Current Address section
     //State section
