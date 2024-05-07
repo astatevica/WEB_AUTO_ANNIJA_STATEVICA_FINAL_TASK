@@ -52,20 +52,28 @@ export class HomePage extends BasePage{
         return cy.get("input#subjectsInput");
     }
 
-    //TODO: jāpbeidz
-    static get setAutoComplete(){
-        return cy.get("#subjectsContainer");
-    }
-
     //Hobbies section
     static get setHobbies(){
-        return cy.get("#hobbiesWrapper");
+        return cy.get("[class='col-md-9 col-sm-12']");
     }
+
     //Picture section
+    static get uploadPicture(){
+        cy.get('input[type=file]').selectFile('cypress/files/auto_test_meme.jpg', { force: true });
+    }
     //Current Address section
     //State section
+    static get setState(){
+        return cy.get("input#react-select-3-input");
+    }
     //City section
+    static get setCity(){
+        return cy.get("input#react-select-4-input");
+    }
     //Submit button
+    static get pressSubmit(){
+        return cy.get("button#submit");
+    }
 
 
 }

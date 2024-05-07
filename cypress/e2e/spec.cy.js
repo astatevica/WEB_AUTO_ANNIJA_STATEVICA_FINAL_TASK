@@ -19,21 +19,23 @@ describe("Elements", () => {
       HomePage.setLastName.type('Doe');
       HomePage.setEmail.type('John.Doe@gmail.com');
       HomePage.setGender.contains("Male").click();
-      HomePage.setMobileNumber.type('+371567890');
+      HomePage.setMobileNumber.type('1371567890');
 
       HomePage.clickOnDatePicker;
       HomePage.setBirthMonth.select("February");
       HomePage.setBirthYear.select("1930");
       HomePage.setBirthDay.contains("28").click();
-
-      //JĀPABEIDZ      
-      //HomePage.setSubject.type('Economics');
-      //HomePage.setAutoComplete.contains('Economics').click();
+   
+      HomePage.setSubject.type('Economics').type('{enter}');
       
-      HomePage.setHobbies.contains("Music").click();
+      HomePage.setHobbies.contains("Music").click({force: true});
 
+      HomePage.uploadPicture;
       
+      HomePage.setState.click({force: true}).type("NCR").type('{enter}');
+      HomePage.setCity.click({force: true}).type("Delhi").type('{enter}');
 
+      HomePage.pressSubmit.click();
 
     }) 
 
