@@ -44,7 +44,7 @@ export class HomePage extends BasePage{
     }
 
     static get setBirthDay(){
-        return cy.get("[class='react-datepicker__week']");
+        return cy.get("[class='react-datepicker__month']");
     }
 
     //Subject section

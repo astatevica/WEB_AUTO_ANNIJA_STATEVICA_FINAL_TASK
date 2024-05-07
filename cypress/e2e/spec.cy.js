@@ -1,5 +1,7 @@
+const { error } = require("console");
 const { BasePage } = require("../pageObjects/BasePage");
 const { HomePage } = require("../pageObjects/HomePage");
+const { ValidationPage } = require("../pageObjects/ValidationPage");
 
 describe("Elements", () => {
   context("Scenarios", () => {
@@ -15,6 +17,7 @@ describe("Elements", () => {
 
 
     it('Input necessary information', () => {
+      //IEVADĪTA INFORMĀCIJA
       HomePage.setFirstName.type('John');
       HomePage.setLastName.type('Doe');
       HomePage.setEmail.type('John.Doe@gmail.com');
@@ -37,6 +40,20 @@ describe("Elements", () => {
 
       HomePage.pressSubmit.click();
 
+
+      //VALIDĀCIJA
+      ValidationPage.validateStudentName;
+      ValidationPage.validateEmail;
+      ValidationPage.validateGender;
+      ValidationPage.validateMobile;
+      ValidationPage.validateBirthDate;
+      ValidationPage.validateSubject;
+      ValidationPage.validateHobbies;
+      ValidationPage.validatePicture;
+      ValidationPage.validateStateCity;
+      
+      
+    
     }) 
 
   })
